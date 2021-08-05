@@ -67,7 +67,7 @@ class Welcome extends StatelessWidget{
               'images/login_bottom.png',
               
               //width:500,
-              //height: 500,
+              height: 243,
               fit: BoxFit.cover,
               
               ),

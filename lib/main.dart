@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Simple Login Form',
       theme: ThemeData(
         //primaryColor:
-        scaffoldBackgroundColor: Colors.black,
+        scaffoldBackgroundColor: Colors.blueAccent,
         
         
       ),

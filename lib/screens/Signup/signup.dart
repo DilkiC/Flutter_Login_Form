@@ -1,48 +1,17 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_login_form/screens/Signup/signup.dart';
-import 'package:flutter_login_form/screens/Welcome/welcome.dart';
-
-class Login extends StatefulWidget{
-  //const Login({Key key}) : super(key: key);
-
+import 'package:flutter_login_form/screens/Login/login.dart';
+class Signup extends StatelessWidget{
   @override
-  LoginState createState() {
-    return LoginState();
-  }
-}
-
-class LoginState extends State<Login>{
-  //final _formKey = GlobalKey<FormState>();
-
-@override
-  Widget build(BuildContext context) {
-    // Build a Form widget using the _formKey created above.
+  Widget build(BuildContext context){
     return Scaffold(
-      body: Center(
-        //padding: const EdgeInsets.all(16.0),
-      //key: _formKey,
-      
-      child: Column(
+      body:Center(
+        child: Column(
         children: <Widget>[
           // Add TextFormFields and ElevatedButton here.
-          /* Container(
-            child:  Image.asset(
-              'images/main_bottom.png',
-              width: 150,
-              height: 150,
-              fit: BoxFit.cover,
-              ),
-
-          ), */
-          
           Container(
-          padding: EdgeInsets.symmetric(horizontal: 0,vertical:50, ),  
+             padding: EdgeInsets.symmetric(horizontal: 5,vertical:50, ),  
 
-          child:Text("Login",
+          child:Text("Sign up",
             style: TextStyle(
                fontWeight: FontWeight.bold,
                fontSize: 25,
@@ -52,37 +21,14 @@ class LoginState extends State<Login>{
                ),
             ),
           ),
-          Container(
-            width:200 ,
-            //alignment: Alignment(3,5),
-            
-            decoration: BoxDecoration(
-              borderRadius:BorderRadius.circular(10.0) 
-              ),
-            padding: EdgeInsets.symmetric(horizontal: 5,vertical:16 ),  
-            child:TextField(
-              //autofocus: true,
-              style: TextStyle(
-              ),
-             // The validator receives the text that the user has entered.
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
-                
-               ),//underlineInputBorder
-              hintText: 'Enter your email',
-            ),
-            
-            )
-          ),
 
-           Container(
+          Container(
             width:200 ,
             //alignment: Alignment.topCenter,
             decoration: BoxDecoration(
               borderRadius:BorderRadius.circular(10.0) 
               ),
-            padding: EdgeInsets.symmetric(horizontal: 5,vertical:16 ),  
+            padding: EdgeInsets.symmetric(horizontal: 5,vertical:10 ),  
               child:TextField(
               
               style: TextStyle(
@@ -93,7 +39,52 @@ class LoginState extends State<Login>{
                 borderRadius: BorderRadius.circular(10.0),
                 
                ),//underlineInputBorder
-              hintText: 'Password',
+              hintText: 'Name',
+            ),
+            
+            )
+          ),
+
+          Container(
+            width:200 ,
+            //alignment: Alignment.topCenter,
+            decoration: BoxDecoration(
+              borderRadius:BorderRadius.circular(10.0) 
+              ),
+            padding: EdgeInsets.symmetric(horizontal: 5,vertical:10 ),  
+              child:TextField(
+              
+              style: TextStyle(
+              ),
+             // The validator receives the text that the user has entered.
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                
+               ),//underlineInputBorder
+              hintText: 'Email',
+            ),
+            
+            )
+          ),
+          Container(
+            width:200 ,
+            //alignment: Alignment.topCenter,
+            decoration: BoxDecoration(
+              borderRadius:BorderRadius.circular(10.0) 
+              ),
+            padding: EdgeInsets.symmetric(horizontal: 5,vertical:10 ),  
+              child:TextField(
+              
+              style: TextStyle(
+              ),
+             // The validator receives the text that the user has entered.
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                
+               ),//underlineInputBorder
+              hintText: 'password',
             ),
             
             )
@@ -108,34 +99,20 @@ class LoginState extends State<Login>{
               onPressed: (){
 
               },
-              child: const Text('Sign in'),
+              child: const Text('Sign up'),
             ),
           ),
 
-          Container(
-            child:  IconButton(icon: Icon(Icons.next_plan),color: Colors.white, 
-              onPressed: (){
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context){
-                      return Signup();
-                    },
-                  ),
-                );
-              },
-              ),
-
-          ),
-
-          Container(
+          
+          
+           Container(
             child:  IconButton(icon: Icon(Icons.arrow_back),color: Colors.white, 
               onPressed: (){
                 Navigator.push(
                   context, 
                   MaterialPageRoute(
                     builder: (context){
-                      return Welcome();
+                      return Login();
                     },
                   ),
                 );
@@ -143,31 +120,24 @@ class LoginState extends State<Login>{
               ),
 
           ),
-
-          Container(
-            //alignment: Alignment.bottomLeft,
-            child:  Image.asset(
+        Container(
+            alignment: Alignment.bottomLeft,
+            
+              child:Image.asset(
               'images/login_bottom.png',
               width: 1000,
-              height: 126,
+              height: 117,
               fit: BoxFit.cover,
+              
               ),
 
           ),
           
-
-            
         ],
+        )
+       
       ),
-      )
+      
     );
   }
 }
-  /* @override
-  Widget build(BuildContext context){
-    return Scaffold(
-     body: Center(
-       child:Text("Login"),
-     )
-    );
-  } */
